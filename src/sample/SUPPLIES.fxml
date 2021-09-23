@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="559.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SUPPLIES">
+   <children>
+      <TableView fx:id="SUPPLIER_TABLE" layoutX="39.0" layoutY="107.0" onMouseClicked="#handleMouseAction_SUP" prefHeight="131.0" prefWidth="428.0">
+         <columns>
+            <TableColumn fx:id="SUPNR_C" prefWidth="54.0" text="SUPNR" />
+            <TableColumn fx:id="SUPNAME_C" prefWidth="96.0" text="SUPNAME" />
+            <TableColumn fx:id="SUPADD_C" prefWidth="97.0" text="SUPADDRESS" />
+            <TableColumn fx:id="SUPCITY_C" prefWidth="100.0" text="SUPCITY" />
+            <TableColumn fx:id="SUPSTATUS_C" text="SUPSTATUS" />
+         </columns>
+      </TableView>
+      <Label layoutX="197.0" layoutY="50.0" text="Supplier">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="PRODUCT_TABLE" layoutX="41.0" layoutY="299.0" onMouseClicked="#handleMouseAction_PRO" prefHeight="131.0" prefWidth="428.0">
+         <columns>
+            <TableColumn fx:id="SUPNR_C1" prefWidth="72.0" text="PRODNR" />
+            <TableColumn fx:id="SUPNAME_C1" prefWidth="115.0" text="PRONAME" />
+            <TableColumn fx:id="SUPADD_C1" prefWidth="101.0" text="PRODTYPE" />
+            <TableColumn fx:id="SUPCITY_C1" prefWidth="139.0" text="AVAILABLE QUANTITY" />
+         </columns>
+      </TableView>
+      <Label layoutX="200.0" layoutY="246.0" text="Product">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="SUPPLIES_TABLE" layoutX="503.0" layoutY="107.0" onMouseClicked="#handleMouseAction" prefHeight="323.0" prefWidth="428.0">
+         <columns>
+            <TableColumn fx:id="SUPNR_S" prefWidth="72.0" text="SUPNR" />
+            <TableColumn fx:id="PRODNR_S" prefWidth="115.0" text="PRODNR" />
+            <TableColumn fx:id="PUR_S" prefWidth="101.0" text="PURCHASE_PRICE" />
+            <TableColumn fx:id="DEL_S" prefWidth="139.0" text="DELIVERY_PERIOID" />
+         </columns>
+      </TableView>
+      <Label layoutX="660.0" layoutY="50.0" text="SUPPLIES">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="41.0" layoutY="458.0" prefHeight="60.0" prefWidth="428.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="PURCHASE PRICE" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="DELIVERY PERIOD" GridPane.rowIndex="1" />
+            <TextField fx:id="PURCH_T" GridPane.columnIndex="1" />
+            <TextField fx:id="DELV_T" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="611.0" layoutY="458.0" prefHeight="46.0" prefWidth="222.0" spacing="20.0">
+         <children>
+            <Button fx:id="INSERTBT" mnemonicParsing="false" text="Insert" />
+            <Button fx:id="UPDATEBT" mnemonicParsing="false" text="Update" />
+            <Button fx:id="DELETEBT" mnemonicParsing="false" text="Delete" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

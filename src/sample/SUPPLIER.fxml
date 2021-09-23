@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SUPPLIER">
+   <children>
+      <HBox layoutX="47.0" layoutY="320.0" prefHeight="46.0" prefWidth="213.0" spacing="20.0">
+         <children>
+            <Button fx:id="INSERTBT" mnemonicParsing="false" text="Insert" />
+            <Button fx:id="UPDATEBT" mnemonicParsing="false" text="Update" />
+            <Button fx:id="DELETEBT" mnemonicParsing="false" text="Delete" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <GridPane layoutX="40.0" layoutY="101.0" prefHeight="196.0" prefWidth="227.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="83.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="111.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="61.0" text="SUPNR" />
+            <Label text="SUPNAME" GridPane.rowIndex="1" />
+            <Label text="SUPADDRESS" GridPane.rowIndex="2" />
+            <Label text="SUPCITY" GridPane.rowIndex="3" />
+            <Label text="SUPSTATUS" GridPane.rowIndex="4" />
+            <TextField fx:id="SUPNR_T" GridPane.columnIndex="1" />
+            <TextField fx:id="SUPNAME_T" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="SUPADD_T" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="SUPCITY_T" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="SUPSTAT_T" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <TableView fx:id="SUPPLIER_TABLE" layoutX="307.0" layoutY="38.0" onMouseClicked="#handleMouseAction" prefHeight="328.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="SUPNR_C" prefWidth="54.0" text="SUPNR" />
+          <TableColumn fx:id="SUPNAME_C" prefWidth="96.0" text="SUPNAME" />
+            <TableColumn fx:id="SUPADD_C" prefWidth="97.0" text="SUPADDRESS" />
+            <TableColumn fx:id="SUPCITY_C" prefWidth="100.0" text="SUPCITY" />
+            <TableColumn fx:id="SUPSTATUS_C" text="SUPSTATUS" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="22.0" prefHeight="46.0" prefWidth="244.0" text="SUPPLIER" textAlignment="CENTER">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
